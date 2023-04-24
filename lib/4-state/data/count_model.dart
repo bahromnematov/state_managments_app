@@ -1,12 +1,13 @@
 import 'package:get/get.dart';
 
-class CountModel {
+class CountModel{
   var count = 0.obs;
   var countOfChanging = 0.obs;
 
-  CountModel({required this.count, required this.countOfChanging});
+  CountModel(this.count,this.countOfChanging);
 
-  void increment() {
+
+  void incrementChanging(){
     countOfChanging++;
   }
 }

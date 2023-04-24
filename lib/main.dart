@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:state_managments_app/2-state/ui/products_page.dart';
 import 'package:state_managments_app/2-state/view_model/products_view_model.dart';
@@ -13,14 +14,18 @@ import '3-state/data/repository/mind_repository.dart';
 import '3-state/service/local_db_servise.dart';
 
 void main() {
-  runApp(MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => CounterViewModel(),),
-        ChangeNotifierProvider(create: (context) => ProductsViewModel(),),
-        ChangeNotifierProvider(create: (context) => MindsViewModel(repository: MindRepository(db: LocalDatabase()),)),
-
-      ],
-      child: const MyApp()));
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(
+      create: (context) => CounterViewModel(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => ProductsViewModel(),
+    ),
+    ChangeNotifierProvider(
+        create: (context) => MindsViewModel(
+              repository: MindRepository(db: LocalDatabase()),
+            )),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -29,14 +34,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home:  CounterPage(),
+      home: CounterPage(),
     );
   }
 }
-
