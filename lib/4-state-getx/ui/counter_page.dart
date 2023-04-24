@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:state_managments_app/4-state/controller/counter_controller.dart';
+import '../controller/counter_controller.dart';
 import 'first_page.dart';
 
 class CounterPage extends StatelessWidget {

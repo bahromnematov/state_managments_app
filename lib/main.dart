@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:state_managments_app/2-state/ui/products_page.dart';
 import 'package:state_managments_app/2-state/view_model/products_view_model.dart';
-import 'package:state_managments_app/3-state/ui/all_minds_page.dart';
-import 'package:state_managments_app/3-state/ui/write_to_db_page.dart';
 import 'package:state_managments_app/3-state/view_model/minds_view_model.dart';
-import 'package:state_managments_app/4-state/ui/counter_page.dart';
+import 'package:state_managments_app/5-state/ui/Joker_page.dart';
 
 import '1-state/provider/counter_view_model.dart';
-import '1-state/provider/provider_counter.dart';
 import '3-state/data/repository/mind_repository.dart';
 import '3-state/service/local_db_servise.dart';
+import '4-state-getx/ui/counter_page.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
@@ -39,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CounterPage(),
+      home: JokerPage(),
     );
   }
 }
