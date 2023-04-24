@@ -5,6 +5,7 @@ import 'package:state_managments_app/2-state/view_model/products_view_model.dart
 import 'package:state_managments_app/3-state/ui/all_minds_page.dart';
 import 'package:state_managments_app/3-state/ui/write_to_db_page.dart';
 import 'package:state_managments_app/3-state/view_model/minds_view_model.dart';
+import 'package:state_managments_app/4-state/ui/counter_page.dart';
 
 import '1-state/provider/counter_view_model.dart';
 import '1-state/provider/provider_counter.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home:  WriteToDbPage(),
+      home:  CounterPage(),
     );
   }
 }
